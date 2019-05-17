@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">3000</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" >About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger">Vision</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="masthead">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Awesome!!</h1>
+      <a (click)="getcountrylist()" class="btn btn-primary js-scroll-trigger">Get Countries</a>
+    </div>
+  </div>
+</header>
+
+
+<section id="projects" class="projects-section bg-light" >
+    <h2 class="text-center">all countries list (name | code | currency)</h2>
+  <div class="container">
+      
+      <div class="row"  *ngFor="let item of countrydata;">
+ 
+          <div class="col-md-8 " style="margin:auto;margin-bottom: 10px;padding: 0px;" (click)="onSelect(item.countrycode)">
+            <div class="card py-4 h-100" style="border-bottom: 2px solid #64a19d;">
+              <div class=" text-center">
+                <div class="small text-black-50"> {{item.countryname}} | {{item.countrycode}} | {{item.currency}}</div>
+              </div>
+            </div>
+          </div>
+          
+         
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="contact-section bg-black">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Address</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">Batcave</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-globe text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">web</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">
+              <a href="https://yashwantsoni.live">yashwantsoni.live</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Phone</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">+91 8387987009</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+  </div>
+</section>
+

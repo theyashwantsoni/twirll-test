@@ -1,0 +1,20 @@
+<section id="projects" class="projects-section bg-light" >
+    <h2 class="text-center">all cities list ( id |statecode |countrylist_id | cityname)</h2>
+  <div class="container">
+      
+      <div class="row"  *ngFor="let item of citylist;">
+ 
+          <div class="col-md-8 " style="margin:auto;margin-bottom: 10px;padding: 0px;" >
+            <div class="card py-4 h-100" style="border-bottom: 2px solid #64a19d;">
+              <div class=" text-center">
+                <div class="small text-black-50"> {{item.id}} | {{item.state_code}} | {{item.countrylist_id}} | {{item.cityname}}</div>
+              </div>
+            </div>
+          </div>
+          
+         
+      
+    </div>
+    
+  </div>
+</section>
